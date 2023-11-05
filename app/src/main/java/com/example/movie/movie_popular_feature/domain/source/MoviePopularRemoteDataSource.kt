@@ -1,4 +1,4 @@
-package com.example.movie.core.movie_popular_feature.domain.source
+package com.example.movie.movie_popular_feature.domain.source
 
 import com.example.movie.core.data.remote.response.MovieResponse
 import com.example.movie.core.paging.MoviePagingSource

@@ -8,7 +8,7 @@ data class MovieResponse(
     //O nome contido no SerializedName deve ser identico a propriedade vinda da api
     @SerializedName("page")
     val page: Int,
-    @SerializedName("page")
+    @SerializedName("results")
     val results: List<MovieResult>,
     @SerializedName("total_pages")
     val totalPages: Int,

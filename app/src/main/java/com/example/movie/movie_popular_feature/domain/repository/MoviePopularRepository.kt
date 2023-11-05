@@ -1,4 +1,4 @@
-package com.example.movie.core.movie_popular_feature.domain.repository
+package com.example.movie.movie_popular_feature.domain.repository
 
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData

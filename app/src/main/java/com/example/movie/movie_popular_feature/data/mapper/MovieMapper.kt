@@ -1,4 +1,4 @@
-package com.example.movie.core.movie_popular_feature.data.mapper
+package com.example.movie.movie_popular_feature.data.mapper
 
 import com.example.movie.core.data.remote.model.MovieResult
 import com.example.movie.core.domain.model.Movie
