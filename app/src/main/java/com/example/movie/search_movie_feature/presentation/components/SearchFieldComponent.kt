@@ -1,7 +1,9 @@
 package com.example.movie.search_movie_feature.presentation.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -20,6 +22,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.movie.search_movie_feature.presentation.MovieSearchEvent
+import com.example.movie.ui.theme.black
 import com.example.movie.ui.theme.white
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -63,6 +66,8 @@ fun SearchFieldComponent(
             }
         ),
         colors = TextFieldDefaults.colors(
+            focusedContainerColor = black,
+            unfocusedContainerColor= black,
             unfocusedPlaceholderColor = white,
             cursorColor = white,
             focusedTextColor = white,
@@ -72,6 +77,7 @@ fun SearchFieldComponent(
         ),
         modifier = modifier
             .fillMaxWidth()
+            //.padding(16.dp)
             .heightIn(min = 60.dp)
     )
 

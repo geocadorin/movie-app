@@ -5,7 +5,7 @@ import java.time.Duration
 data class MovieDetails(
     val id: Int,
     val title: String,
-    val genres: List<Int>,
+    val genres: List<String>,
     val overview: String?,
     val backdropPathUrl: String?,
     val releaseDate: String?,

@@ -8,8 +8,10 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import com.example.movie.search_movie_feature.domain.usecase.GetMovieSearchUsecase
 import com.example.movie.search_movie_feature.presentation.state.MovieSearchState
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+@HiltViewModel
 class MovieSearchViewModel @Inject constructor(
     private val getMovieSearchUsecase: GetMovieSearchUsecase
 ) : ViewModel() {

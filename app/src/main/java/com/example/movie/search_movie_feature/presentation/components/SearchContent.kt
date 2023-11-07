@@ -43,6 +43,7 @@ fun SearchContent(
 
     Column(
         modifier = modifier
+            .padding(top = 64.dp)
             .fillMaxSize()
             .background(black),
         verticalArrangement = Arrangement.SpaceBetween,
