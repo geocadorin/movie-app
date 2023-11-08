@@ -56,7 +56,7 @@ fun MovieDetailContent(
         modifier = modifier
             .fillMaxSize()
             .background(black)
-    ){
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -70,14 +70,14 @@ fun MovieDetailContent(
                     .fillMaxWidth()
                     .height(200.dp)
             )
-            
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End
-            ){
+            ) {
                 IconButton(
                     onClick = {
-                        movieDetails?.toMovie()?.let{
+                        movieDetails?.toMovie()?.let {
                             onAddFavorite(it)
                         }
                     }
@@ -89,7 +89,7 @@ fun MovieDetailContent(
                     )
                 }
             }
-            
+
             Text(
                 text = movieDetails?.title.toString(),
                 color = white,
@@ -109,7 +109,7 @@ fun MovieDetailContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 8.dp)
-            ){
+            ) {
                 movieDetails?.genres?.forEach {
                     MovieDetailGenreTag(genre = it)
                 }
@@ -150,17 +150,19 @@ fun MovieDetailContent(
             )
         }
 
-        if(isError.isNotEmpty()){
-            Text(text = isError,
-                color= MaterialTheme.colorScheme.error,
+        if (isError.isNotEmpty()) {
+            Text(
+                text = isError,
+                color = MaterialTheme.colorScheme.error,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 8.dp)
-                    .align(Alignment.TopCenter))
+                    .align(Alignment.TopCenter)
+            )
         }
 
-        if (isLoading){
+        if (isLoading) {
             CircularProgressIndicator(
                 modifier = Modifier.align(Alignment.TopCenter),
                 color = yellow
@@ -169,10 +171,11 @@ fun MovieDetailContent(
 
         MovieDetailSimilarMovies(
             pagingMoviesSimilar = pagingMoviesSimilar,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
                 .fillMaxHeight(0.35f)
                 .align(Alignment.BottomEnd)
-            )
+        )
 
     }
 }
